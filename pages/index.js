@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import Link from 'next/link'
 import styles from '../styles/Home.module.css'
+import Menu from '../pages/menu.js'
 
 export default function Home({list}) {
   return (
@@ -9,26 +10,15 @@ export default function Home({list}) {
         <title>Create Next App</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Filmes em Destaque
-        </h1>
-
-    <Link href="/busca">Ir para a Busca</Link>
-
-        <ul>
-          {list.map(item=>(
-            <li>
-              <a href={`/movie/${item.id}`}>
-                <img src={`https://image.tmdb.org/t/p/original${item.poster_path}`} width="150" /><br/>
-                {item.title}
-              </a>
-            </li>
-          ))}
-        </ul>
-
-      </main>
+        <Menu></Menu>
+        <h2 className={styles.title}>
+          Bem-vindo ao CinemaNext.
+        </h2>
+        <p>Aqui você pode consultar seus filmes preferidos, utilizando uma completa base de dados.</p>
+        <p>Você também pode conferir os filmes que estão em destaque atualmente.</p>
+        <main className={styles.main}>
+        
+        </main>
     </div>
   )
 }

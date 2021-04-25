@@ -1,9 +1,11 @@
 html,
 body {
+  background-color: black;
   padding: 0;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  color: white;
 }
 
 a {
@@ -13,4 +15,44 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+.menu ul {
+  padding:0px;
+  margin:0px;
+  background-color:#000000;
+  list-style:none;
+}
+
+.menu ul li { display: inline; }
+
+.menu ul li a {
+  padding: 6px 20px;
+  display: inline-block;
+
+  /* visual do link */
+  background-color:#000000;
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  font-weight: bold;
+  border-bottom:3px solid #ff0000;
+}
+
+button {
+  background-color: #ff0000; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 10px;
+  width: 80px;
+  text-align: center;
+  text-decoration: none;
+  display: inline;
+  font-size: 16px;
+}
+
+input {
+  width: 200px;
+  height: 47px;
+  font-size: large;
+  display: inline-block;
 }

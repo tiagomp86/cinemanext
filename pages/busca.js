@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import { useState } from 'react'
 import styles from '../styles/Home.module.css'
+import Menu from '../pages/menu.js'
 
 export default function Home({list}) {
 
@@ -17,20 +18,21 @@ export default function Home({list}) {
 
   return (
     <div className={styles.container}>
+
       <Head>
-        <title>Create Next App</title>
+        <title>Cinema Next</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
-      <main className={styles.main}>
-        <h1 className={styles.title}>
+      <Menu></Menu>
+      
+        <h2 className={styles.title}>
           Busca
-        </h1>
-
-        <input type="text" value={searchText} onChange={e=>setSearchText(e.target.value)} />
-        <button onClick={handleSearch}>Buscar</button>
-        <hr/>
-
+        </h2>
+        <div className="painelBusca">
+          <input type="text" value={searchText} onChange={e=>setSearchText(e.target.value)} />
+          <button className="rainbow-button" onClick={handleSearch}>Buscar</button>
+        </div>
+        <main className={styles.main}>
         <ul>
             {movieList.map(item=>(
                 <li>
@@ -41,7 +43,7 @@ export default function Home({list}) {
             </li>
             ))}
         </ul>
-      </main>
+        </main>
     </div>
   )
 }
